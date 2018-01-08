@@ -1,0 +1,33 @@
+{
+  "name": "hapbeat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "pug": "gulp pug",
+    "sass": "gulp sass",
+    "-w": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yamajyn/hapbeat.git"
+  },
+  "author": "yamamoto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yamajyn/hapbeat/issues"
+  },
+  "homepage": "https://github.com/yamajyn/hapbeat#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

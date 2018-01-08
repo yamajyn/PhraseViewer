@@ -1,0 +1,76 @@
+- var content = data.main
+-
+  function isKanji(c){ // c:判別したい文字
+    var unicode = c.charCodeAt(0);
+    if ( (unicode>=0x4e00  && unicode<=0x9fcf)  || // CJK統合漢字
+         (unicode>=0x3400  && unicode<=0x4dbf)  || // CJK統合漢字拡張A
+         (unicode>=0x20000 && unicode<=0x2a6df) || // CJK統合漢字拡張B
+         (unicode>=0xf900  && unicode<=0xfadf)  || // CJK互換漢文
+         (unicode>=0x3005 && unicode<=0x3006)   || // 々 〆
+         (unicode>=0x2f800 && unicode<=0x2fa1f) )  // CJK互換漢字補助
+        return true;
+
+    return false;
+  }
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet", href="css/style.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    title #{content.title} viewer
+  body.mincho.vertical.back-white.viewer
+    .title #{content.title}
+    .author
+      h2 #{content.author}
+    .main
+      .siorioki
+        img.siori(src="img/siori.svg")
+      button(type="button" value="a").sendButton.mincho.verticel 投稿
+      - var paras = content.main.split("\n");
+        each para in paras
+          - var blocks = para.split("》");
+          p
+            each block in blocks
+              - var b = block.split("《");
+              if b.length > 1
+                - var i;
+                - for(i=0;i<b[0].length; i++)
+                  if !isKanji(b[0].charAt(b[0].length - i - 1)) 
+                    - var front = b[0].slice(0, b[0].length - i);
+                    - var back = b[0].slice(b[0].length - i);
+                    if front.lastIndexOf("｜") != -1
+                      - front = front.substr(0,front.lastIndexOf("｜"))
+                    - var blocks2 = front.split("］");
+                    each block2 in blocks2
+                      - var b2 = block2.split("［");
+                      if b2.length > 1 && b2[1].indexOf("傍点") > 0 && b2[1].indexOf("「") > 0
+                        - var word = b2[1].split("」")[0].split("「")[1];
+                        - var front2 = b2[0].slice(0,b2[0].length - word.length);
+                        a #{front2}
+                        a.neighbor #{word}
+                      else
+                        a.kerning #{b2[0]} 
+                    ruby
+                      rb #{back}
+                      rp （
+                      rt #{b[1] + " "}
+                      rp ）
+                    - break;
+              else
+                - var blocks2 = b[0].split("］");
+                each block2 in blocks2
+                  - var b2 = block2.split("［");
+                  if b2.length > 1 && b2[1].indexOf("傍点") > 0 && b2[1].indexOf("「") > 0
+                    - var word = b2[1].split("」")[0].split("「")[1];
+                    - var front2 = b2[0].slice(0,b2[0].length - word.length);
+                    a #{front2}
+                    a.neighbor #{word}
+                  else
+                    a #{b2[0]} 
+    input(type="hidden" name="episode" value="1")
+    script(src="js/jquery-3.2.1.min.js")
+    script(src="js/jquery.cookie.js")          
+    script(src="js/main.js")
+    
+  
