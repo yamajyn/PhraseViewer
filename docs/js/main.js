@@ -1,6 +1,7 @@
 
 $(function(){
   $('.siorioki').width($('.main').width());
+  $.cookie("epi_" + getEpisode(), "read", { expires: 14 });
   var siori_pos = parseInt($.cookie("SIORI"));
   if(siori_pos){
     $('.siori').css({left: siori_pos});
@@ -9,7 +10,7 @@ $(function(){
   }
   $('.main').bind('mouseup',function(e) {
     var len = getText().length;
-    if(len > 0 && len < 50){
+    if(len > 1 && len <= 50){
       var buttonX = e.pageX + 15;
       var buttonY = e.pageY;
       $('.sendButton').animate({ top: buttonY, left: buttonX },0);
@@ -23,19 +24,21 @@ $(function(){
     var hostUrl= 'http://localhost:8000';
     var param1 = getText();
     var param2 = getEpisode();
-    $.ajax({
-        url: hostUrl,
-        type:'POST',
-        dataType: 'json',
-        data : {phrase : param1,episode : param2},
-        timeout:3000,
-    }).done(function(data) {
-      console.log(param1);
-    }).fail(function() {
-      alert("error");
-    });
-    $('.sendButton').hide();
-    deSelect();
+    if(param1.length > 0 && param1.length <= 50){
+      $.ajax({
+          url: hostUrl,
+          type:'POST',
+          dataType: 'json',
+          data : {phrase : param1,episode : param2},
+          timeout:3000,
+      }).done(function(data) {
+        console.log(param1);
+      }).fail(function() {
+        alert("error");
+      });
+      $('.sendButton').hide();
+      deSelect();
+    }
   });
   $('.siorioki').on('click',function(e){
     var xy = muuXY(e, this);

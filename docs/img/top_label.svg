@@ -1,0 +1,54 @@
+<svg id="グループ化_28" data-name="グループ化 28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1568.987 -99.101 264.826 317.897">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eb6161;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 35px;
+        font-family: HiraKakuProN-W6, Hiragino Kaku Gothic ProN;
+      }
+
+      .cls-3 {
+        fill: #fde52c;
+      }
+
+      .cls-4 {
+        filter: url(#パス_13);
+      }
+
+      .cls-5 {
+        filter: url(#合体_2);
+      }
+    </style>
+    <filter id="合体_2" x="1568.987" y="-99.101" width="264.826" height="317.897" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="パス_13" x="1777" y="2" width="47.423" height="46.227" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="グループ化_21" data-name="グループ化 21" transform="translate(27)">
+    <g id="グループ化_14" data-name="グループ化 14" transform="translate(238.987 -491.01)">
+      <g class="cls-5" transform="matrix(1, 0, 0, 1, -265.99, 491.01)">
+        <path id="合体_2-2" data-name="合体 2" class="cls-1" d="M114.238,394.346-10,435.9V221.917H87.912L47.913,136H82.68l30.995,63.972L144.149,136h34.185l-39.327,85.917h97.819V435.9Z" transform="translate(1584.99 -229.1)"/>
+      </g>
+    </g>
+    <text id="お気に入り_フレーズを_共有しよう" data-name="お気に入り
+フレーズを
+共有しよう" class="cls-2" transform="translate(1580 28)"><tspan x="0" y="31">お気に入り</tspan><tspan x="0" y="76">フレーズを</tspan><tspan x="0" y="121">共有しよう</tspan></text>
+  </g>
+  <g class="cls-4" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path id="パス_13-2" data-name="パス 13" class="cls-3" d="M15.928.719l3.523,7.168a1.338,1.338,0,0,0,.972.729l7.9,1.154a1.312,1.312,0,0,1,.729,2.248l-5.71,5.589a1.343,1.343,0,0,0-.364,1.154l1.336,7.9a1.3,1.3,0,0,1-1.883,1.4l-7.046-3.705a1.418,1.418,0,0,0-1.215,0L7.059,27.932a1.3,1.3,0,0,1-1.883-1.4l1.336-7.9a1.343,1.343,0,0,0-.364-1.154L.438,11.9a1.317,1.317,0,0,1,.729-2.248l7.9-1.154a1.207,1.207,0,0,0,.972-.729L13.558.6A1.371,1.371,0,0,1,15.928.719Z" transform="translate(1782.97 8.03)"/>
+  </g>
+</svg>

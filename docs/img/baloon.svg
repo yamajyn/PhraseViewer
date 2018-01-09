@@ -1,0 +1,23 @@
+<svg id="グループ化_9" data-name="グループ化 9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1167.424 65 83.577 82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        filter: url(#合体_1);
+      }
+    </style>
+    <filter id="合体_1" x="1167.424" y="65" width="83.577" height="82" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path id="合体_1-2" data-name="合体 1" class="cls-1" d="M20.769,61.334c-.149,0-.3,0-.461,0C5.18,61.03,0,63.408,0,63.408s5.653-8.562,6.7-13.972c0-.014.006-.028.009-.041A31.953,31.953,0,1,1,20.769,61.334Z" transform="translate(1173.42 71)"/>
+  </g>
+</svg>

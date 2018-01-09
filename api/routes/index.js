@@ -4,7 +4,18 @@ var connection = require('../mysqlConnection');
 var moment = require('moment');
 
 router.get('/', function(req, res, next) {
-  var query = 'SELECT * FROM phrases';
+  var query = 'SELECT phrase, episode, count FROM phrases ORDER BY update_at DESC';
+  connection.query(query, function(err, rows) {
+    if(err){
+      res.status(500).send({ error: err });
+    }else{
+      res.json(rows);
+    }
+  });
+});
+
+router.get('/top', function(req, res, next) {
+  var query = 'SELECT c.episode, c.phrase FROM phrases AS c INNER JOIN (SELECT a.episode,max(a.update_at) as update_at FROM phrases AS a INNER JOIN (SELECT episode,max(count) as count FROM phrases GROUP BY episode ) AS b ON a.episode = b.episode AND a.count = b.count GROUP BY a.episode) AS d ON c.episode = d.episode AND c.update_at = d.update_at';
   connection.query(query, function(err, rows) {
     if(err){
       res.status(500).send({ error: err });

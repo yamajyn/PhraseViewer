@@ -1,4 +1,5 @@
 - var content = data.main
+- var episode = 1;
 -
   function isKanji(c){ // c:判別したい文字
     var unicode = c.charCodeAt(0);
@@ -18,16 +19,18 @@ html(lang="ja")
     meta(charset="utf-8")
     link(rel="stylesheet", href="css/style.css")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-    title #{content.title} viewer
+    title #{content.title} #{episode}話
   body.mincho.vertical.back-white.viewer
+    include template/_menubar
     .title #{content.title}
     .author
       h2 #{content.author}
     .main
       .siorioki
         img.siori(src="img/siori.svg")
-      button(type="button" value="a").sendButton.mincho.verticel 投稿
-      - var paras = content.main.split("\n");
+      button(type="button").sendButton.mincho.verticel 投稿
+      
+      - var paras = content.episode._1.split("\n");
         each para in paras
           - var blocks = para.split("》");
           p
@@ -68,9 +71,12 @@ html(lang="ja")
                     a.neighbor #{word}
                   else
                     a #{b2[0]} 
-    input(type="hidden" name="episode" value="1")
+      - var next = episode + 1;
+      - var nextLink = "/viewer" + next + ".html"
+      a.nextLink(href=nextLink) 次の話へ
+    input(type="hidden" name="episode" value=episode)
     script(src="js/jquery-3.2.1.min.js")
-    script(src="js/jquery.cookie.js")          
+    script(src="js/jquery.cookie.js")
     script(src="js/main.js")
     
   

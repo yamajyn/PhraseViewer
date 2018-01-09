@@ -1,29 +1,101 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <meta name="description" content="phrase viewer は読んだ小説のお気に入りフレーズを集計、トップビューに表示するサイトです。第一弾として『我輩は猫である』を集計中！">
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="js/jquery-3.2.1.min.js"></script>
-    <title>我輩は猫である</title>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/top.js"></script>
+    <title>PhraseViewer | 我輩は猫である</title>
   </head>
-  <body class="mincho vertical back-white index">
-    <div class="mainTitle"> 
-      <div class="title"><span class="wagahai"> 
-          <ruby> 
-            <rb>我輩</rb>
-            <rt>わがはい</rt>
-          </ruby></span><span class="ha">は</span><br><span class="neko"> 
-          <ruby>
-            <rb>猫</rb>
-            <rt>ねこ</rt>
-          </ruby></span><span class="dearu">である</span></div>
-    </div><a class="read" href="/viewer.html"> 
-      <p class="gothic">読む</p></a>
-    <div class="prof horizontal"><img class="photo" src="/img/Natsume_Soseki_photo.jpg">
-      <div class="name">夏目漱石</div>
-      <div class="live">[1867-1916]</div>
-      <p class="gothic">『吾輩は猫である』を手始めに多彩な創作活動を展開した。代表作に『三四郎』『それから』『門』『こゝろ』、遺作の『明暗』など多数の著がある。</p>
+  <body class="mincho back-white index">
+    <div class="vertical top">
+      <div class="mainTitle"> 
+        <div class="title"><span class="wagahai"> 
+            <ruby> 
+              <rb>我輩</rb>
+              <rt>わがはい</rt>
+            </ruby></span><span class="ha">は</span><br><span class="neko"> 
+            <ruby>
+              <rb>猫</rb>
+              <rt>ねこ</rt>
+            </ruby></span><span class="dearu">である</span></div>
+        <div class="phrase"> <span>大飯を食った
+            <ruby>
+              <rb>後 </rb>
+              <rt>あと </rt>
+            </ruby></span><span>でタカジヤスターゼを飲む
+            <div class="counter"><img src="/img/baloon.svg">
+              <p class="horizontal">10</p>
+            </div></span></div>
+      </div>
+      <div class="label"><img src="/img/top_label.svg"><img src="/img/howto.svg"></div>
+      <div class="horizontal read"><img src="/img/arrow.svg">
+        <p>読む</p>
+      </div>
+      <div class="prof horizontal"><img class="photo" src="/img/Natsume_Soseki_photo.jpg">
+        <div class="name">夏目漱石</div>
+        <div class="live">[1867-1916]</div>
+        <p class="gothic">『吾輩は猫である』を手始めに多彩な創作活動を展開した。代表作に『三四郎』『それから』『門』『こゝろ』、遺作の『明暗』など多数の著がある。</p>
+      </div>
     </div>
   </body>
+  <div class="center">全１１話</div>
+  <div class="episodes">
+    <ul>
+      <li><a class="vertical" href="/viewer1.html">第一話
+          <div class="maru"></div></a></li>
+      <li><a class="vertical" href="/viewer2.html">第二話
+          <div class="maru"></div></a></li>
+      <li><a class="vertical" href="/viewer.html">第三話
+          <div class="maru"></div></a></li>
+      <li><a class="vertical" href="/viewer.html">第四話
+          <div class="maru"></div></a></li>
+      <li><a class="vertical" href="/viewer.html">第五話
+          <div class="maru"></div></a></li>
+      <li><a class="vertical" href="/viewer.html">第六話
+          <div class="maru"></div></a></li>
+      <li><a class="vertical" href="/viewer.html">第七話
+          <div class="maru"></div></a></li>
+      <li><a class="vertical" href="/viewer.html">第八話
+          <div class="maru"></div></a></li>
+      <li><a class="vertical" href="/viewer.html">第九話
+          <div class="maru"></div></a></li>
+      <li><a class="vertical" href="/viewer.html">第十話
+          <div class="maru"></div></a></li>
+      <li><a class="vertical" href="/viewer.html">第十一話
+          <div class="maru"></div></a></li>
+    </ul>
+  </div>
+  <div class="center">みんなが決めた、各話お気に入りフレーズ</div>
+  <div class="bestPhrase">
+    <ul>
+      <li class="vertical"> 
+        <p> </p>
+      </li>
+      <li class="vertical"> 
+        <p> </p>
+      </li>
+      <li class="vertical">
+        <p></p>
+      </li>
+      <li class="vertical">
+        <p></p>
+      </li>
+      <li class="vertical">
+        <p></p>
+      </li>
+      <li class="vertical">
+        <p></p>
+      </li>
+      <li class="vertical">
+        <p></p>
+      </li>
+      <li class="vertical">
+        <p></p>
+      </li>
+    </ul>
+  </div>
 </html>

@@ -2,31 +2,91 @@
 doctype html
 html(lang="ja")
   head
+    meta(name="description" content="phrase viewer は読んだ小説のお気に入りフレーズを集計、トップビューに表示するサイトです。第一弾として『我輩は猫である』を集計中！")
     meta(charset="utf-8")
     link(rel="stylesheet", href="css/style.css")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
     script(src="js/jquery-3.2.1.min.js")
-    title #{content.title}
-  body.mincho.vertical.back-white.index
-    .mainTitle 
-      .title
-        span.wagahai 
-          ruby 
-            rb 我輩
-            rt わがはい
-        span.ha は
-        br
-        span.neko 
-          ruby
-            rb 猫
-            rt ねこ
-        span.dearu である
-    a.read(href="/viewer.html") 
-      p.gothic 読む
-    .prof.horizontal
-      img(src="/img/Natsume_Soseki_photo.jpg").photo
-      .name 夏目漱石
-      .live [1867-1916]
-      p.gothic 『吾輩は猫である』を手始めに多彩な創作活動を展開した。代表作に『三四郎』『それから』『門』『こゝろ』、遺作の『明暗』など多数の著がある。
-      
-    
+    script(src="js/jquery.cookie.js")
+    script(src="js/top.js")
+    title PhraseViewer | #{content.title}
+  body.mincho.back-white.index
+    .vertical.top
+      .mainTitle 
+        .title
+          span.wagahai 
+            ruby 
+              rb 我輩
+              rt わがはい
+          span.ha は
+          br
+          span.neko 
+            ruby
+              rb 猫
+              rt ねこ
+          span.dearu である
+        .phrase 
+          span 大飯を食った
+            ruby
+              rb 後 
+              rt あと 
+          span でタカジヤスターゼを飲む
+            .counter
+              img(src="/img/baloon.svg")
+              p.horizontal 10
+      .label
+        img(src="/img/top_label.svg")
+        img(src="/img/howto.svg")
+      .horizontal.read
+        img(src="/img/arrow.svg")
+        p 読む
+      .prof.horizontal
+        img(src="/img/Natsume_Soseki_photo.jpg").photo
+        .name 夏目漱石
+        .live [1867-1916]
+        p.gothic 『吾輩は猫である』を手始めに多彩な創作活動を展開した。代表作に『三四郎』『それから』『門』『こゝろ』、遺作の『明暗』など多数の著がある。
+  .center 全１１話
+  .episodes
+    ul
+      li: a.vertical(href="/viewer1.html") 第一話
+        .maru
+      li: a.vertical(href="/viewer2.html") 第二話
+        .maru
+      li: a.vertical(href="/viewer.html") 第三話
+        .maru
+      li: a.vertical(href="/viewer.html") 第四話
+        .maru
+      li: a.vertical(href="/viewer.html") 第五話
+        .maru
+      li: a.vertical(href="/viewer.html") 第六話
+        .maru
+      li: a.vertical(href="/viewer.html") 第七話
+        .maru
+      li: a.vertical(href="/viewer.html") 第八話
+        .maru
+      li: a.vertical(href="/viewer.html") 第九話
+        .maru
+      li: a.vertical(href="/viewer.html") 第十話
+        .maru
+      li: a.vertical(href="/viewer.html") 第十一話
+        .maru
+  .center みんなが決めた、各話お気に入りフレーズ
+  .bestPhrase
+    ul
+      li.vertical 
+        p 
+      li.vertical 
+        p 
+      li.vertical
+        p
+      li.vertical
+        p
+      li.vertical
+        p
+      li.vertical
+        p
+      li.vertical
+        p
+      li.vertical
+        p
+        
