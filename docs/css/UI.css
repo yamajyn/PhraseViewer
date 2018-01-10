@@ -94,6 +94,7 @@
   margin: 0 4vw;
   color: #F0F0F0;
   font-size: 4vw;
+  z-index: 2000;
 }
 
 .buttons .button {
