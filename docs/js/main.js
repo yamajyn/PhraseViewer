@@ -37,7 +37,8 @@ $(function(){
     }
   });
   $('.sendButton').on('click', function(){
-    var hostUrl= 'http://localhost:8000';
+    //var hostUrl= 'http://localhost:8000';
+    var hostUrl= 'https://wagahai.herokuapp.com';
     var param1 = getText();
     var param2 = getEpisode();
     if(param1.length > 0 && param1.length <= 50){
@@ -48,9 +49,7 @@ $(function(){
           data : {phrase : param1,episode : param2},
           timeout:10000,
       }).done(function(data) {
-        console.log(param1);
       }).fail(function() {
-        alert("error");
       });
       $('.sendButton').hide();
       deSelect();
