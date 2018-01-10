@@ -56,7 +56,8 @@ gulp.task('default', ['sass', 'browser-sync', 'pug', 'watch']);
 gulp.task('watch', () => {
     gulp.watch(paths.scss + '**/*.scss',['sass']);
     gulp.watch(paths.pug + '**/*.pug', ['pug']);
-    gulp.watch(paths.json + '**/*.json', ['pug'])
+    gulp.watch(paths.pug + '**/template/*.pug', ['pug']);
+    gulp.watch(paths.json + '**/*.json', ['json'])
 });
  
 

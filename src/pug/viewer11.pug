@@ -1,5 +1,5 @@
 - var content = data.main
-- var episode = 2;
+- var episode = 11;
 -
   function isKanji(c){ // c:判別したい文字
     var unicode = c.charCodeAt(0);
@@ -31,7 +31,7 @@ html(lang="ja")
         img.siori(src="img/siori.svg")
       button(type="button").sendButton.mincho.verticel 投稿
       
-      - var paras = content.episode._2.split("\n");
+      - var paras = content.episode._11.split("\n");
         each para in paras
           - var blocks = para.split("》");
           p

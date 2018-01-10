@@ -5,6 +5,10 @@ $(function(){
       type:'GET',
       timeout:3000,
   }).done(function(data) {
+    data.forEach(function(d,index){
+      var words = d.phrase.split(" ");
+      $(".top").append('<div class="phrase latest' + index + '">' + makeRuby(words) + '</div>');
+    });
   }).fail(function() {
     alert("error");
   });
@@ -13,9 +17,13 @@ $(function(){
       type:'GET',
       timeout:3000,
   }).done(function(data) {
-    data.forEach(function(d){
+    data.forEach(function(d,index){
       var words = d.phrase.split(" ");
-      $(".bestPhrase li").eq(d.episode-1).append(makeRuby(words));
+      var ruby = makeRuby(words);
+      $(".bestPhrase li").eq(d.episode-1).text("");
+      $(".bestPhrase li").eq(d.episode-1).append(ruby);
+      // +'<img src="/img/baloon.svg"/><p class="horizontal">' + d.count + '</p>'
+      $(".top").append('<div class="phrase top' + index + '">' + ruby + '</div>');
     })
   }).fail(function() {
     alert("error");
@@ -48,19 +56,25 @@ function isKanji(c){ // c:判別したい文字
 function makeRuby(words){
   var isRuby;
   var ans = "";
-  words.forEach(function(word){
-    var wo = word.split("");
-    isRuby = true;
-    
-    wo.forEach(function(w){
-      if(isKanji(w)){
-        isRuby = false;
-      }
-    });
-    if(!isRuby){
-      ans+=word;
-      console.log(word);
+  var preWord="";
+  words.forEach(function(word,index){
+    if(index>0){
+      var wo = word.split("");
+      isRuby = true;
+      wo.forEach(function(w){
+        if(isKanji(w)){
+          isRuby = false;
+        }
+      });
+    }
+    if(isRuby){
+      ans += "<ruby><rb>" + preWord + "</rb><rt>" + word + "</rt></ruby>"
+      preWord =""
+    }else{
+      ans+=preWord;
+      preWord = word;
     }
   });
+  ans += preWord;
   return ans;
 }

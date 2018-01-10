@@ -1,13 +1,29 @@
 
 $(function(){
   $('.siorioki').width($('.main').width());
-  $.cookie("epi_" + getEpisode(), "read", { expires: 14 });
-  var siori_pos = parseInt($.cookie("SIORI"));
+  
+  var epi = getEpisode() +'';
+  $.cookie("epi_" + epi, "read", { expires: 14 });
+  
+  var siori_pos = parseInt($.cookie("SIORI" + epi));
   if(siori_pos){
-    $('.siori').css({left: siori_pos});
     $('.siori').show();
-    $(window).scrollLeft(siori_pos);
+    $('.siori').css({left: siori_pos});
+    $('html,body').animate({scrollLeft: siori_pos-$('.main').width()}, 800, 'swing');
   }
+  
+  var fontSize = parseInt($.cookie("font"));
+  if(fontSize){
+    setFontSize(fontSize);
+  }
+  
+  $('.menubar li').each(function(index){
+    var i = index + 1;
+    if(!$.cookie("epi_" + i)){
+      $(this).find(".maru").show();
+    }
+  });
+  
   $('.main').bind('mouseup',function(e) {
     var len = getText().length;
     if(len > 1 && len <= 50){
@@ -30,7 +46,7 @@ $(function(){
           type:'POST',
           dataType: 'json',
           data : {phrase : param1,episode : param2},
-          timeout:3000,
+          timeout:10000,
       }).done(function(data) {
         console.log(param1);
       }).fail(function() {
@@ -42,10 +58,31 @@ $(function(){
   });
   $('.siorioki').on('click',function(e){
     var xy = muuXY(e, this);
-    $('siori').show();
+    $('.siori').show();
     $('.siori').css({left: xy[0]});
-    $.cookie("SIORI", xy[0], { expires: 14 });
-    console.log(xy[0]);
+    $.cookie("SIORI" + epi, xy[0], { expires: 14 });
+  });
+  var menuon = false;
+  $('.handle-wrapper').on('click',function(){
+    if(menuon){
+      $('.menubar').css({'top':'-40vh'});
+      menuon = false;
+    }else{
+      $('.menubar').css({'top':'0'});
+      menuon = true;
+    }
+  });
+  $('.plus').on('click',function(){
+    var f = 1 + parseInt($('p').css('font-size'));
+    if(f<25){
+      setFontSize(f);
+    }
+  });
+  $('.minus').on('click',function(){
+    var f = -1 + parseInt($('p').css('font-size'));
+    if(f>15){
+      setFontSize(f);
+    }
   });
 });
 
@@ -97,4 +134,10 @@ function getText() {
 
 function getEpisode(){
   return $('input:hidden[name="episode"]').val();
+}
+
+function setFontSize(f){
+  $('.main p').css({'font-size':f + 'px'});
+  $('.main p').css({'letter-space':f*2 + 2 + 'px'});
+  $.cookie("font", f, { expires: 14 });
 }

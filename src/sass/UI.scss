@@ -1,0 +1,122 @@
+.menubar{
+  position:fixed;
+  top:-40vh;
+  left: 50%;
+  transform: translate(-50%);
+  width:80vw;
+  height:40vh;
+  background-color: rgba(#333333, 0.88);
+  border-radius: 0 0 15px 15px;
+  z-index: 1000;
+  transition: .5s ease;
+  ul{
+    position:absolute;
+    left:50%;
+    transform: translate(-50%);
+    top:0;
+    bottom:0;
+    margin:auto;
+  }
+  li{
+    position:relative;
+    list-style-type: none;
+    color:#f0f0f0;
+    font-size:2vw;
+    margin:5vh 1vw;
+  }
+  .maru{
+    position:absolute;
+    top:-1vw;
+    right:0;
+    width:1.5vw;
+    height:1.5vw;
+    background-color: #E65959;
+    border-radius: 1.5vw;
+    display:none;
+  }
+  .topLink{
+    position:absolute;
+    height:50px;
+    left:0;
+    right:0;
+    top:0;
+    margin:auto;
+    color:#f0f0f0;
+    font-size:3vw;
+    text-align: center;
+    z-index: 1050;
+  }
+}
+.handle-wrapper{
+  position:absolute;
+  width:30%;
+  height:50px;
+  left:0;
+  right:0;
+  bottom:-50px;
+  margin:auto;
+}
+.handle{
+  cursor:pointer;
+  position:absolute;
+  min-width: 100px;
+  width:70%;
+  height:20px;
+  left:0;
+  right:0;
+  margin:auto;
+  background-color: rgba(#777777, 0.6);
+  border-radius: 0 0 10px 10px;
+  .handlebar{
+    position:absolute;
+    width:60%;
+    height:6px;
+    left:0;
+    right:0;
+    bottom:5px;
+    margin:auto;
+    border-radius: 4px;
+    background-color: rgba(#eeeeee, 0.6);
+  }
+}
+.buttons{
+  position:relative;
+  width:10vw;
+  height:40vh;
+  margin:0 4vw;
+  color:#F0F0F0;
+  font-size: 4vw;
+  .button{
+    position:absolute;
+    width:10vh;
+    height:10vh;
+    background-color: #333333;
+    box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.3);
+    border-radius:10vh;
+    vertical-align: center;
+    text-align: center;
+    font-size: 6vh;
+    cursor:pointer;
+  }
+  .plus{
+    top:8vh;
+    right:0;
+  }
+  .minus{
+    bottom:8vh;
+    right:0;
+  }
+}
+@media screen and (max-width:750px) {
+  .menubar{
+    width:90vw;
+    background-color: rgba(#333333, 0.88);
+  }
+  .handle-wrapper{
+    width:50%;
+  }
+  .handle{
+    height:15px;
+    background-color: rgba(#777777, 0.88);
+  }
+}
