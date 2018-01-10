@@ -121,8 +121,22 @@
 
 @media screen and (max-width: 750px) {
   .menubar {
-    width: 90vw;
+    width: 95vw;
     background-color: rgba(51, 51, 51, 0.88);
+  }
+  .menubar .episodeLink {
+    width: 90%;
+  }
+  .menubar ul {
+    margin: 0;
+  }
+  .menubar li {
+    position: relative;
+    font-size: 4vw;
+  }
+  .menubar .topLink {
+    margin: 20px 0;
+    font-size: 7vw;
   }
   .handle-wrapper {
     width: 50%;
@@ -130,5 +144,37 @@
   .handle {
     height: 15px;
     background-color: rgba(119, 119, 119, 0.88);
+  }
+  .buttons {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #F0F0F0;
+    font-size: 4vw;
+  }
+  .buttons .button {
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    background-color: #333333;
+    box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10vh;
+    vertical-align: center;
+    text-align: center;
+    font-size: 6vh;
+    cursor: pointer;
+  }
+  .buttons .plus {
+    top: auto;
+    right: 10vw;
+    bottom: 5vh;
+  }
+  .buttons .minus {
+    bottom: 5vh;
+    left: 10vw;
   }
 }
