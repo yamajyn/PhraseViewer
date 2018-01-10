@@ -1,5 +1,11 @@
 
 $(function(){
+  
+  var fontSize = parseInt($.cookie("font"));
+  if(fontSize){
+    setFontSize(fontSize);
+  }
+  
   $('.siorioki').width($('.main').width());
   
   var epi = getEpisode() +'';
@@ -10,11 +16,6 @@ $(function(){
     $('.siori').show();
     $('.siori').css({left: siori_pos});
     $('html,body').animate({scrollLeft: siori_pos-$('.main').width()}, 800, 'swing');
-  }
-  
-  var fontSize = parseInt($.cookie("font"));
-  if(fontSize){
-    setFontSize(fontSize);
   }
   
   $('.menubar li').each(function(index){
@@ -71,17 +72,25 @@ $(function(){
       menuon = true;
     }
   });
+  $('.main').on('click',function(){
+    if(menuon){
+      $('.menubar').css({'top':'-40vh'});
+      menuon = false;
+    }
+  });
   $('.plus').on('click',function(){
     var f = 1 + parseInt($('p').css('font-size'));
     if(f<25){
       setFontSize(f);
     }
+    $('.siorioki').width($('.main').width());
   });
   $('.minus').on('click',function(){
     var f = -1 + parseInt($('p').css('font-size'));
     if(f>15){
       setFontSize(f);
     }
+    $('.siorioki').width($('.main').width());
   });
 });
 
