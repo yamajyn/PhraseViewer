@@ -1,6 +1,6 @@
 $(function(){
-  var hostUrl= 'http://localhost:8000';
-  //var hostUrl = 'https://wagahai.herokuapp.com'
+  //var hostUrl= 'http://localhost:8000';
+  var hostUrl = 'https://wagahai.herokuapp.com'
   $.ajax({
       url: hostUrl,
       type:'GET',
