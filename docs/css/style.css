@@ -167,30 +167,30 @@ body.viewer .nextLink {
   padding: 0 70px;
 }
 
-body.index {
+.index {
   margin: 0;
 }
 
-body.index .top {
+.index .top {
   overflow: hidden;
 }
 
-body.index .label {
+.index .label {
   width: 15vw;
   margin: -5vw 5vw 0 0;
   z-index: 500;
 }
 
-body.index .label img {
+.index .label img {
   width: 13vw;
 }
 
-body.index .top {
+.index .top {
   width: 100vw;
   height: 100vh;
 }
 
-body.index .mainTitle {
+.index .mainTitle {
   position: absolute;
   color: #333333;
   line-height: 10vw;
@@ -203,32 +203,32 @@ body.index .mainTitle {
   margin: auto;
 }
 
-body.index .mainTitle .title {
+.index .mainTitle .title {
   margin: auto;
 }
 
-body.index .mainTitle .title ruby rt {
+.index .mainTitle .title ruby rt {
   font-size: 2.2vw;
 }
 
-body.index .mainTitle .wagahai {
+.index .mainTitle .wagahai {
   font-size: 8vw;
 }
 
-body.index .mainTitle .ha {
+.index .mainTitle .ha {
   font-size: 5vw;
 }
 
-body.index .mainTitle .neko {
+.index .mainTitle .neko {
   font-size: 10vw;
   margin-top: 13vw;
 }
 
-body.index .mainTitle .dearu {
+.index .mainTitle .dearu {
   font-size: 5vw;
 }
 
-body.index .phrase {
+.index .phrase {
   position: absolute;
   font-size: 20px;
   font-weight: 200;
@@ -238,109 +238,109 @@ body.index .phrase {
   z-index: 300;
 }
 
-body.index .latest1 {
+.index .latest1 {
   right: 23vw;
   font-size: 2vw;
   animation: up 30s linear 0s infinite normal none running;
 }
 
-body.index .latest2 {
+.index .latest2 {
   left: 28vw;
   font-size: 1.8vw;
   animation: up 28s linear 1s infinite normal none running;
 }
 
-body.index .latest3 {
+.index .latest3 {
   right: 32vw;
   opacity: 0.8;
   font-size: 1.5vw;
   animation: up 27s linear 3s infinite normal none running;
 }
 
-body.index .latest4 {
+.index .latest4 {
   left: 24vw;
   opacity: 0.7;
   font-size: 1.3vw;
   animation: up 25s linear 16s infinite normal none running;
 }
 
-body.index .latest5 {
+.index .latest5 {
   left: 28vw;
   opacity: 0.6;
   font-size: 1.2vw;
   animation: up 24s linear 27s infinite normal none running;
 }
 
-body.index .top1 {
+.index .top1 {
   left: 34vw;
   opacity: 1;
   font-size: 2.5vw;
   animation: up 25s linear 10s infinite normal none running;
 }
 
-body.index .top2 {
+.index .top2 {
   right: 25vw;
   opacity: 0.8;
   animation: up 18s linear 24s infinite normal none running;
 }
 
-body.index .top3 {
+.index .top3 {
   left: 22vw;
   opacity: 0.8;
   animation: up 24s linear 13s infinite normal none running;
 }
 
-body.index .top4 {
+.index .top4 {
   right: 28vw;
   opacity: 0.8;
   animation: up 19s linear 17s infinite normal none running;
 }
 
-body.index .top5 {
+.index .top5 {
   left: 31vw;
   opacity: 0.8;
   animation: up 25s linear 7s infinite normal none running;
 }
 
-body.index .top6 {
+.index .top6 {
   right: 18vw;
   opacity: 0.8;
   animation: up 26s linear 20s infinite normal none running;
 }
 
-body.index .top7 {
+.index .top7 {
   left: 19vw;
   opacity: 0.8;
   animation: up 19s linear 24s infinite normal none running;
 }
 
-body.index .top8 {
+.index .top8 {
   right: 20vw;
   opacity: 0.8;
   animation: up 20s linear 16s infinite normal none running;
 }
 
-body.index .top9 {
+.index .top9 {
   left: 38vw;
   font-size: 2vw;
   animation: up 34s linear 6s infinite normal none running;
 }
 
-body.index .top10 {
+.index .top10 {
   right: 35vw;
   opacity: 0.7;
   font-size: 1.2vw;
   animation: up 18s linear 10s infinite normal none running;
 }
 
-body.index .top11 {
+.index .top11 {
   left: 15vw;
   opacity: 0.8;
   font-size: 1.9vw;
   animation: up 25s linear 24s infinite normal none running;
 }
 
-body.index .read {
+.index .read {
   position: absolute;
   display: block;
   bottom: 2vh;
@@ -354,46 +354,47 @@ body.index .read {
   cursor: pointer;
 }
 
-body.index .read img {
+.index .read img {
   width: 5vw;
 }
 
-body.index .read p {
+.index .read p {
   margin: 0;
   font-size: 20px;
   line-height: 27px;
 }
 
-body.index .prof {
+.index .prof {
   position: absolute;
   left: 4vw;
   bottom: 2vh;
   width: 11vw;
   min-width: 100px;
   z-index: 500;
+  text-align: center;
 }
 
-body.index .prof .photo {
+.index .prof .photo {
   width: 11vw;
   height: auto;
   border-radius: 50%;
   min-width: 100px;
 }
 
-body.index .prof .name {
+.index .prof .name {
   text-align: center;
 }
 
-body.index .prof .live {
+.index .prof .live {
   text-align: center;
   font-size: 10px;
 }
 
-body.index .prof p {
+.index .prof p {
   font-size: 11px;
 }
 
-body.index .bottom {
+.index .bottom {
   width: 100vw;
   height: auto;
   background-color: #f0f0f0;
@@ -401,14 +402,14 @@ body.index .bottom {
   z-index: 500;
 }
 
-body.index .episodes {
+.index .episodes {
   width: 85vw;
-  height: 15vw;
+  height: 18vw;
   margin: 1vw 1vw;
   font-weight: bold;
 }
 
-body.index .episodes li {
+.index .episodes li {
   position: relative;
   float: right;
   font-size: 3vw;
@@ -417,7 +418,7 @@ body.index .episodes li {
   margin: 0;
 }
 
-body.index .episodes .maru {
+.index .episodes .maru {
   position: absolute;
   top: -1vw;
   right: 1.5vw;
@@ -428,24 +429,24 @@ body.index .episodes .maru {
   display: none;
 }
 
-body.index .episodes a {
+.index .episodes a {
   margin: 0;
 }
 
-body.index .center {
+.index .center {
   font-size: 2.5vw;
   width: 100vw;
   margin: 5vw 0;
   text-align: center;
 }
 
-body.index .bestPhrase {
+.index .bestPhrase {
   width: 85vw;
   height: 30vw;
   font-weight: bold;
 }
 
-body.index .bestPhrase li {
+.index .bestPhrase li {
   position: relative;
   float: right;
   font-size: 1.5vw;
@@ -454,14 +455,14 @@ body.index .bestPhrase li {
   margin-right: 1.5vw;
 }
 
-body.index .bestPhrase li img {
+.index .bestPhrase li img {
   position: absolute;
   right: -2vw;
   top: -2vw;
   width: 2.5vw;
 }
 
-body.index .bestPhrase li p {
+.index .bestPhrase li p {
   position: absolute;
   right: -1.1vw;
   top: -2.5vw;
@@ -469,7 +470,7 @@ body.index .bestPhrase li p {
   font-weight: 400;
 }
 
-body.index .seisakuito {
+.index .seisakuito {
   width: 100vw;
   margin: 50px auto 300px auto;
   font-size: 22px;
@@ -496,12 +497,60 @@ body.index .seisakuito {
 }
 
 @media screen and (max-width: 750px) {
-  body p {
+  body.index .label {
+    display: none;
+  }
+  body.index p {
     font-size: 1rem;
     line-height: 1.55rem;
   }
-  body .prof {
+  body.index .center {
+    margin-top: 10vh;
+    font-size: 5vw;
+  }
+  body.index .episodes {
+    width: 90vw;
+    height: 60vh;
+  }
+  body.index .episodes li {
+    width: 15vw;
+    font-size: 8vw;
+    margin-bottom: 5vh;
+  }
+  body.index .episodes .maru {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 5vw;
+  }
+  body.index .prof {
+    margin: auto;
     right: 0;
     left: 0;
+    top: 50vh;
+    width: 10vw;
+    min-width: 200px;
+    height: 30vh;
+  }
+  body.index .prof img.photo {
+    width: 5vw;
+    min-width: 70px;
+    margin: auto;
+  }
+  body.index .prof p {
+    display: none;
+  }
+  body.index .seisakuito {
+    width: 90vw;
+  }
+  body.index .bestPhrase {
+    width: 90vw;
+    margin: 0 5vw;
+    height: 200vh;
+  }
+  body.index .bestPhrase li {
+    font-size: 5vw;
+    width: 10vw;
+    height: 80vh;
+    margin-bottom: 20vh;
   }
 }
