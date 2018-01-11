@@ -67,10 +67,6 @@ a:visited {
   color: inherit;
 }
 
-a:hover {
-  color: #111111;
-}
-
 ::selection {
   background-color: none;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
