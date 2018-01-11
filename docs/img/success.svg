@@ -1,0 +1,17 @@
+<svg id="グループ化_52" data-name="グループ化 52" xmlns="http://www.w3.org/2000/svg" viewBox="93 47 38 38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #f0f0f0;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <circle id="楕円形_12" data-name="楕円形 12" class="cls-1" cx="19" cy="19" r="19" transform="translate(93 47)"/>
+  <path id="パス_16" data-name="パス 16" class="cls-2" d="M99.644,68.67l6.723,6.723,15.72-15.72" transform="translate(2 -2)"/>
+</svg>

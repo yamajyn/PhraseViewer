@@ -90,6 +90,38 @@ a:hover {
   margin-bottom: -10px;
 }
 
+.loads {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 20px;
+  z-index: 1000;
+}
+
+.load {
+  display: none;
+  animation: loop 1s linear 0s infinite;
+}
+
+.success {
+  display: none;
+}
+
+.fail {
+  display: none;
+}
+
+.f_message {
+  position: absolute;
+  top: 38px;
+  left: 1px;
+  display: none;
+}
+
+.hide {
+  animation: hide 5s linear 0s 1 forwards;
+}
+
 body.viewer {
   color: #333333;
 }
@@ -114,7 +146,7 @@ body.viewer .author h2 {
 }
 
 body.viewer p {
-  margin: 4vh 30px 4vw 30px;
+  margin: 6vh 30px 4vw 30px;
   font-size: 1.2rem;
   line-height: 2;
   letter-spacing: 1px;
@@ -165,6 +197,12 @@ body.viewer .nextLink {
   font-size: 20px;
   bottom: 5vw;
   padding: 0 70px;
+}
+
+body.viewer .loading {
+  position: fixed;
+  left: 0;
+  top: -2px;
 }
 
 .index {
@@ -434,6 +472,7 @@ body.viewer .nextLink {
 }
 
 .index .center {
+  position: relative;
   font-size: 2.5vw;
   width: 100vw;
   margin: 5vw 0;
@@ -496,6 +535,27 @@ body.viewer .nextLink {
   }
 }
 
+@keyframes loop {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media screen and (max-width: 750px) {
   body.index .label {
     display: none;
@@ -510,7 +570,7 @@ body.viewer .nextLink {
   }
   body.index .episodes {
     width: 90vw;
-    height: 70vh;
+    height: 80vh;
   }
   body.index .episodes li {
     width: 15vw;
@@ -527,7 +587,7 @@ body.viewer .nextLink {
     right: 0;
     left: 0;
     top: auto;
-    bottom: 10vh;
+    bottom: 15vh;
     width: 10vw;
     min-width: 200px;
     height: 30vh;
@@ -542,6 +602,9 @@ body.viewer .nextLink {
   }
   body.index .seisakuito {
     width: 90vw;
+  }
+  body.index .seisakuito p {
+    font-size: 4vw;
   }
   body.index .bestPhrase {
     width: 90vw;

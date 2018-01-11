@@ -70,6 +70,9 @@ $(function(){
     var param1 = getText();
     var param2 = getEpisode();
     if(param1.length > 0 && param1.length <= 50){
+      $('.load').show();
+      $('.fail').removeClass('hide');
+      $('.success').removeClass('hide');
       $.ajax({
           url: hostUrl,
           type:'POST',
@@ -77,7 +80,12 @@ $(function(){
           data : {phrase : param1,episode : param2},
           timeout:10000,
       }).done(function(data) {
+        $('.load').hide();
+        $('.success').addClass('hide');
       }).fail(function() {
+        $('.fail').show();
+        $('.fail').addClass('hide');
+        $('.load').hide();
       });
       $('.sendButton').hide();
       deSelect();

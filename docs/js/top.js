@@ -1,6 +1,7 @@
 $(function(){
   //var hostUrl= 'http://localhost:8000';
   var hostUrl = 'https://wagahai.herokuapp.com'
+  $('.load').show();
   $.ajax({
       url: hostUrl,
       type:'GET',
@@ -10,8 +11,11 @@ $(function(){
       var words = d.phrase.split(" ");
       $(".top").append('<div class="phrase latest' + index + '">' + makeRuby(words) + '</div>');
     });
+    $('.load').hide();
+    $('.success').show();
   }).fail(function() {
-    //alert("最新の投稿の取得に失敗しました");
+    $('.fail').show();
+    $('.f_message').show();
   });
   $.ajax({
       url: hostUrl+"/top",
@@ -26,8 +30,11 @@ $(function(){
       // +'<img src="/img/baloon.svg"/><p class="horizontal">' + d.count + '</p>'
       $(".top").append('<div class="phrase top' + index + '">' + ruby + '</div>');
     })
+    $('.success').show();
+    $('.load').hide();
   }).fail(function() {
-    //alert("各話のお気に入りフレーズトップの取得に失敗しました。");
+    $('.fail').show();
+    $('.f_message').show();
   });
   $('.read').on('click', function(){
     $('html,body').animate({scrollTop: $('.top').height()}, 800, 'swing');
