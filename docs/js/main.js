@@ -1,6 +1,31 @@
 
 $(function(){
-  
+  var isTutorial = $.cookie("tutorialed");
+  if(typeof isTutorial === 'undefined'){
+    $('.howto1').css({'opacity': '1'});
+    $('.howto1_next').css({'opacity': '1'});
+    
+  }
+  $('.howto1_next').on('click', function(){
+    $('.howto1').css({'opacity': '0'});
+    $(this).css({'opacity': '0'});
+    $('.howto2').css({'opacity': '1'});
+    $('.close').css({'opacity': '1'});
+    $('.howto2_back').css({'opacity': '1'});
+  });
+  $('.close').on('click', function(){
+    $('.howto2').css({'opacity': '0'});
+    $('.close').css({'opacity': '0'});
+    $('.howto2_back').css({'opacity': '0'});
+    $.cookie("tutorialed", "looked", { expires: 14 });
+  });
+  $('.howto2_back').on('click', function(){
+    $('.howto2').css({'opacity': '0'});
+    $('.close').css({'opacity': '0'});
+    $('.howto2_back').css({'opacity': '0'});
+    $('.howto1').css({'opacity': '1'});
+    $('.howto1_next').css({'opacity': '1'});
+  });
   var fontSize = parseInt($.cookie("font"));
   if(fontSize){
     setFontSize(fontSize);

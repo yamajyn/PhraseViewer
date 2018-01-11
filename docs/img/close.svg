@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3404 1155 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #f0f0f0;
+      }
+    </style>
+  </defs>
+  <g id="グループ化_42" data-name="グループ化 42" transform="translate(1990)">
+    <circle id="楕円形_10" data-name="楕円形 10" class="cls-1" cx="24" cy="24" r="24" transform="translate(1414 1155)"/>
+    <line id="線_14" data-name="線 14" class="cls-2" y1="24" x2="24" transform="translate(1425.5 1167.5)"/>
+    <line id="線_15" data-name="線 15" class="cls-2" x1="24" y1="24" transform="translate(1425.5 1167.5)"/>
+  </g>
+</svg>
