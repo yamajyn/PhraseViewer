@@ -510,7 +510,7 @@ body.viewer .nextLink {
   }
   body.index .episodes {
     width: 90vw;
-    height: 60vh;
+    height: 70vh;
   }
   body.index .episodes li {
     width: 15vw;
@@ -526,7 +526,8 @@ body.viewer .nextLink {
     margin: auto;
     right: 0;
     left: 0;
-    top: 50vh;
+    top: auto;
+    bottom: 10vh;
     width: 10vw;
     min-width: 200px;
     height: 30vh;
