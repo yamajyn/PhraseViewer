@@ -141,9 +141,6 @@
 .tutorial .howto1 {
   position: absolute;
   opacity: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
   z-index: 2010;
 }
 
@@ -165,9 +162,6 @@
 .tutorial .howto2 {
   position: absolute;
   opacity: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
 }
 
 .tutorial .howto2_back {
