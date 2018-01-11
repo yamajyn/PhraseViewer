@@ -183,7 +183,7 @@ body.viewer .siorioki {
   width: 100%;
   height: 5vh;
   z-index: 500;
-  cursor: url(/img/siori.svg), url(/img/siori.png), auto;
+  cursor: url(/img/siori.svg), url(/img/siori.png), pointer;
 }
 
 body.viewer .siori {

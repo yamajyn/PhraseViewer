@@ -82,10 +82,13 @@ $(function(){
       }).done(function(data) {
         $('.load').hide();
         $('.success').addClass('hide');
-      }).fail(function() {
+      }).fail(function(XMLHttpRequest, textStatus, errorThrown) {
         $('.fail').show();
         $('.fail').addClass('hide');
         $('.load').hide();
+        console.log("XMLHttpRequest : " + XMLHttpRequest.status);
+        console.log("textStatus     : " + textStatus);
+        console.log("errorThrown    : " + errorThrown.message);
       });
       $('.sendButton').hide();
       deSelect();
