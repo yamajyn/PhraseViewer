@@ -4,7 +4,8 @@ $(function(){
   if(typeof isTutorial === 'undefined'){
     $('.howto1').css({'opacity': '1'});
     $('.howto1_next').css({'opacity': '1'});
-    
+  }else{
+    $('.tutorial').remove();
   }
   $('.howto1_next').on('click', function(){
     $('.howto1').css({'opacity': '0'});
@@ -18,6 +19,7 @@ $(function(){
     $('.close').css({'opacity': '0'});
     $('.howto2_back').css({'opacity': '0'});
     $.cookie("tutorialed", "looked", { expires: 14 });
+    $('.tutorial').remove();
   });
   $('.howto2_back').on('click', function(){
     $('.howto2').css({'opacity': '0'});
