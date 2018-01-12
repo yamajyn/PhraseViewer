@@ -86,9 +86,6 @@ $(function(){
         $('.fail').show();
         $('.fail').addClass('hide');
         $('.load').hide();
-        console.log("XMLHttpRequest : " + XMLHttpRequest.status);
-        console.log("textStatus     : " + textStatus);
-        console.log("errorThrown    : " + errorThrown.message);
       });
       $('.sendButton').hide();
       deSelect();

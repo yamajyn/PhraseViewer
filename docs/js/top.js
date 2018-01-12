@@ -5,11 +5,12 @@ $(function(){
   $.ajax({
       url: hostUrl,
       type:'GET',
-      timeout:3000,
+      timeout:10000,
   }).done(function(data) {
     data.forEach(function(d,index){
       var words = d.phrase.split(" ");
-      $(".top").append('<div class="phrase latest' + index + '">' + makeRuby(words) + '</div>');
+      var i = index + 1;
+      $(".top").append('<div class="phrase latest' + i + '">' + makeRuby(words) + '</div>');
     });
     $('.load').hide();
     $('.success').show();
