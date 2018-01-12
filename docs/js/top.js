@@ -21,7 +21,7 @@ $(function(){
   $.ajax({
       url: hostUrl+"/top",
       type:'GET',
-      timeout:3000,
+      timeout:10000,
   }).done(function(data) {
     data.forEach(function(d,index){
       var words = d.phrase.split(" ");
