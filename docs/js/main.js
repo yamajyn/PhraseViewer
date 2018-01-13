@@ -60,8 +60,9 @@ $(function(){
       $('.sendButton').animate({ top: buttonY, left: buttonX },0);
       $('.sendButton').show();
     }else{
-      $('.sendButton').hide();
-      //50文字以内のエラーメッセージ
+      if(len>50){
+        alert('50文字以内を選択してください');
+      }
     }
   });
   $('.sendButton').on('click', function(){
@@ -81,11 +82,14 @@ $(function(){
           timeout:10000,
       }).done(function(data) {
         $('.load').hide();
+        $('.fail').hide();
+        $('.success').show();
         $('.success').addClass('hide');
       }).fail(function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.load').hide();
+        $('.success').hide();
         $('.fail').show();
         $('.fail').addClass('hide');
-        $('.load').hide();
       });
       $('.sendButton').hide();
       deSelect();
