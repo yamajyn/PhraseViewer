@@ -52,7 +52,7 @@ $(function(){
     }
   });
   
-  $('.main').bind('mouseup',function(e) {
+  $('.main').bind('touchend mouseup',function(e) {
     var len = getText().length;
     if(len > 1 && len <= 50){
       var buttonX = e.pageX + 15;

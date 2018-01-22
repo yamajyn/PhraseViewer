@@ -76,7 +76,7 @@ function makeRuby(words){
         }
       });
     }
-    if(isRuby){
+    if(isRuby  && preWord.length > 0){
       ans += "<ruby><rb>" + preWord + "</rb><rt>" + word + "</rt></ruby>"
       preWord =""
     }else{

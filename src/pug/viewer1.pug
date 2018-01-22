@@ -50,10 +50,10 @@ html(lang="ja")
                       if b2.length > 1 && b2[1].indexOf("傍点") > 0 && b2[1].indexOf("「") > 0
                         - var word = b2[1].split("」")[0].split("「")[1];
                         - var front2 = b2[0].slice(0,b2[0].length - word.length);
-                        a #{front2}
-                        a.neighbor #{word}
+                        span #{front2}
+                        span.neighbor #{word}
                       else
-                        a.kerning #{b2[0]} 
+                        span.kerning #{b2[0]} 
                     ruby
                       rb #{back}
                       rp （
