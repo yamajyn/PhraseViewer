@@ -477,7 +477,7 @@ body.viewer .loading {
 
 .index .bestPhrase {
   width: 85vw;
-  height: 50vh;
+  height: 80vh;
   font-weight: bold;
 }
 
@@ -507,7 +507,7 @@ body.viewer .loading {
 
 .index .seisakuito {
   width: 100vw;
-  margin: 80px auto 300px auto;
+  margin: 50vh auto 50vh auto;
   font-size: 22px;
   text-align: center;
   line-height: 50px;
